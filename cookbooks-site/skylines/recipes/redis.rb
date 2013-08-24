@@ -1,9 +1,8 @@
-#
-# Author:: Tobias Bieniek (<tobias.bieniek@gmx.de>)
+## Author:: Andrey Lebedev (<andrey@lebedev.lt>)
 # Cookbook Name:: skylines
-# Recipe:: default
+# Recipe:: redis
 #
-# Copyright 2013, Tobias Bieniek
+# Copyright 2013, Andrey Lebedev
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +23,4 @@
 # the root, repl, and debian-sys-maint users.
 #
 
-include_recipe "apt"
-include_recipe "skylines::database"
-include_recipe "skylines::redis"
-include_recipe "skylines::python-packages"
+package "redis-server"
