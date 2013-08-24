@@ -27,8 +27,12 @@
 # install the database server
 include_recipe "postgresql::server"
 
+package "postgresql-server-dev-all"
+
 # install fuzzystrmatch extension
 include_recipe "postgresql::contrib"
+
+include_recipe "postgis"
 
 # create database user
 pg_user "vagrant" do
@@ -39,14 +43,14 @@ end
 pg_database "skylines" do
   owner "vagrant"
   encoding "utf8"
-  template "template0"
+  template "template_postgis"
   locale "en_US.UTF8"
 end
 
 pg_database "skylines_test" do
   owner "vagrant"
   encoding "utf8"
-  template "template0"
+  template "template_postgis"
   locale "en_US.UTF8"
 end
 
