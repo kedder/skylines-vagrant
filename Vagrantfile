@@ -5,7 +5,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 8080, 8080
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks"]
+    chef.cookbooks_path = ["cookbooks", "cookbooks-site"]
 
     chef.add_recipe "skylines"
 
