@@ -27,7 +27,7 @@
 # install the database server
 include_recipe "postgresql::server"
 
-package "postgresql-server-dev-all"
+package "postgresql-server-dev-9.1"
 
 # install fuzzystrmatch extension
 include_recipe "postgresql::contrib"
@@ -43,24 +43,24 @@ end
 pg_database "skylines" do
   owner "vagrant"
   encoding "utf8"
-  template "template_postgis"
+  template "template0"
   locale "en_US.UTF8"
 end
 
 pg_database "skylines_test" do
   owner "vagrant"
   encoding "utf8"
-  template "template_postgis"
+  template "template0"
   locale "en_US.UTF8"
 end
 
 # add extensions to database
 pg_database_extensions "skylines" do
-  extensions ["fuzzystrmatch"]
-  postgis true
+  extensions ["fuzzystrmatch", "postgis"]
+  # postgis true
 end
 
 pg_database_extensions "skylines_test" do
-  extensions ["fuzzystrmatch"]
-  postgis true
+  extensions ["fuzzystrmatch", "postgis"]
+  # postgis true
 end

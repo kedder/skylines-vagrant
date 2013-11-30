@@ -25,7 +25,11 @@
 #
 
 include_recipe "apt"
+include_recipe "build-essential"
+include_recipe "java::openjdk"
+
 include_recipe "skylines::tools"
 include_recipe "skylines::database"
 include_recipe "skylines::redis"
+include_recipe "skylines::xcsoar"
 include_recipe "skylines::python-packages"

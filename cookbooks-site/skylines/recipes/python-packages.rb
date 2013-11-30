@@ -27,14 +27,12 @@
 # install python and pip
 include_recipe "python"
 
-# requirement for the polyencode package
-include_recipe "build-essential"
-
 # requirement for the psycopg2 package
 include_recipe "postgresql::libpq"
 
+
 # install python packages
 execute "pip install -e ." do
-	cwd "/vagrant"
+	cwd "/skylines"
 	action :run
 end

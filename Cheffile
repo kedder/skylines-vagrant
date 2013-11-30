@@ -5,8 +5,8 @@ cookbook 'apt',
     :ref => '1.7.0'
 
 cookbook 'build-essential'
-
 cookbook 'postgis'
+cookbook 'java'
 
 cookbook 'postgresql',
     :git => 'https://github.com/phlipper/chef-postgresql',
