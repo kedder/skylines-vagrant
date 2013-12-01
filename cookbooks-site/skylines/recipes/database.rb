@@ -64,3 +64,15 @@ pg_database_extensions "skylines_test" do
   extensions ["fuzzystrmatch", "postgis"]
   # postgis true
 end
+
+tables = ["geography_columns", "geometry_columns", "raster_columns", "raster_overviews", "spatial_ref_sys"]
+tables.each do |tab|
+  execute "psql -c 'ALTER TABLE #{tab} OWNER TO vagrant' skylines" do
+    user "postgres"
+  end
+
+  execute "psql -c 'ALTER TABLE #{tab} OWNER TO vagrant' skylines_test" do
+    user "postgres"
+  end
+
+end
