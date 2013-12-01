@@ -1,4 +1,2 @@
-default["postgis"]["version"] = "2.0"
-default["postgresql"]["version"] = "9.1"
-default["postgresql"]["max_connections"] = 10
-default["postgresql"]["listen_addresses"] = "*"
+override["postgis"]["version"] = "2.0"
+override["postgresql"]["version"] = "9.1"

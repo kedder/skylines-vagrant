@@ -14,15 +14,19 @@ Vagrant::Config.run do |config|
 
     chef.json = {
         postgresql: {
-            version: "9.1",
-
             password: {
                 postgres: "postgres"
             },
+            max_connections: 10,
+            listen_addresses: "*",
+            pg_hba: [
+              { type: "host",  db: "all", user: "vagrant", addr: "0.0.0.0/0", method: "trust" }
+            ]
         },
         skylines: {
             username: "vagrant"
-        }
+        },
     }
+
   end
 end
