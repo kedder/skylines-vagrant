@@ -30,9 +30,15 @@ include_recipe "python"
 # requirement for the psycopg2 package
 include_recipe "postgresql::libpq"
 
+package "pkg-config"
+package "libcurl3-dev"
+
+execute "pip install xcsoar" do
+    action :run
+end
 
 # install python packages
-execute "pip install -e ." do
+execute "pip install -r requirements.txt" do
     cwd "/skylines"
     action :run
 end
