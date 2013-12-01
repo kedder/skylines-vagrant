@@ -33,6 +33,12 @@ include_recipe "postgresql::libpq"
 
 # install python packages
 execute "pip install -e ." do
-	cwd "/skylines"
-	action :run
+    cwd "/skylines"
+    action :run
+end
+
+execute "/skylines/scripts/initialise_database.py" do
+    cwd "/skylines"
+    user "#{node[:skylines][:username]}"
+    action :run
 end

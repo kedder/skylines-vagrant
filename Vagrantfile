@@ -19,6 +19,9 @@ Vagrant::Config.run do |config|
             password: {
                 postgres: "postgres"
             },
+        },
+        skylines: {
+            username: "vagrant"
         }
     }
   end
