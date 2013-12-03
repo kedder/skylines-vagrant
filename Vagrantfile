@@ -4,7 +4,7 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "skylines", "/skylines", "../skylines"
 
   config.vm.forward_port 8080, 8080
-  # config.vm.forward_port 6379, 6379  # redis
+  config.vm.forward_port 6379, 6379  # redis
   config.vm.forward_port 5432, 5432  # postgres
 
   config.vm.provision :chef_solo do |chef|
@@ -17,6 +17,7 @@ Vagrant::Config.run do |config|
             password: {
                 postgres: "postgres"
             },
+            version: "9.1",
             max_connections: 10,
             listen_addresses: "*",
             pg_hba: [

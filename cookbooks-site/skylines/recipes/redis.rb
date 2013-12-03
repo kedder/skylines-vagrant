@@ -23,4 +23,6 @@
 # the root, repl, and debian-sys-maint users.
 #
 
-package "redis-server"
+include_recipe "redisio"
+include_recipe "redisio::install"
+include_recipe "redisio::enable"
