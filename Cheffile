@@ -17,3 +17,9 @@ cookbook 'redisio'
 cookbook 'yum',
 	:git => 'https://github.com/opscode-cookbooks/yum',
 	:ref => 'v2.4.2'
+
+# Workaround for topological sort failure ["windows", "powershell"],
+# see https://github.com/applicationsonline/librarian/issues/159
+cookbook 'windows',
+	:git => 'https://github.com/SimpleFinance/chef-windows.git'
+
