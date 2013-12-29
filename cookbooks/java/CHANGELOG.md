@@ -2,6 +2,45 @@ Java Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the Java cookbook.
 
+v1.17.2
+-------
+### Bug
+- **[COOK-4136](https://tickets.opscode.com/browse/COOK-4136)** - Add md5 parameter to java_ark resource
+
+
+v1.17.0
+-------
+- **[COOK-4114](https://tickets.opscode.com/browse/COOK-4114)** - Test Kitchen no longer works after merging Pull Request #95 for openjdk tests on Debian/Ubuntu
+- **[COOK-4124](https://tickets.opscode.com/browse/COOK-4124)** - update-alternatives fails to run
+- **[#81](https://github.com/socrata/java/pull/81)** - Ensure local directory hierarchy
+- **[#97](https://github.com/socrata/java/pull/97)** - Expose LWRP state attributes
+- **[#99](https://github.com/socrata/java/pull/99)** - support for MD5 checksum
+- **[#106](https://github.com/socrata/java/pull/106)** - Fixed windows case to prevent bad java_home variable setting
+- **[Update checksums to the officially-published ones from Oracle](https://github.com/socrata/java/commit/b9e1df24caeb6e22346d2d415b3b4384f15d4ffd)**
+- **[Further test kitchen fixes to use the default recipe](https://github.com/socrata/java/commit/01c0b432705d9cfa6d2dfeaa380983e3f604069f)**
+
+v1.16.4
+-------
+### Bug
+- **[#103](https://github.com/socrata/java/pull/103)** - set alternatives when using ibm_tar recipe
+- **[#104](https://github.com/socrata/java/pull/104)** - Specify windows attributes in attribute files
+
+v1.16.2
+-------
+### Improvement
+- **[COOK-3488](https://tickets.opscode.com/browse/COOK-3488)** - set alternatives for ibm jdk
+- **[COOK-3764](https://tickets.opscode.com/browse/COOK-3764)** - IBM Java installer needs 'rpm' package on Ubuntu
+
+### Bug
+- **[COOK-3857](https://tickets.opscode.com/browse/COOK-3857)** - do not unescape the java windows url before parsing it
+- **[#95](https://github.com/socrata/java/pull/95)** - fixes update-alternatives for openjdk installs
+- **[#100](https://github.com/socrata/java/pull/100)** - Use escaped quotes for Windows INSTALLDIR
+
+
+v1.16.0
+-------
+### Improvement
+- **[COOK-3823](https://tickets.opscode.com/browse/COOK-3823)** - Upgrade to JDK 7u45-b18
 
 v1.15.4
 -------
