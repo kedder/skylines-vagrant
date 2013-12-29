@@ -26,6 +26,8 @@
 
 include_recipe "apt"
 include_recipe "build-essential"
+
+package "openjdk-7-jre-headless"
 include_recipe "java::openjdk"
 
 include_recipe "skylines::tools"
