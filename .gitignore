@@ -3,5 +3,4 @@
 .vagrant
 .vagrant*
 Cheffile.lock
-cookbooks/
 tmp/
